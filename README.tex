@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{makeidx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[dvipsnames,svgnames,table]{xcolor}
+\usepackage[dvips]{graphicx}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\author{harsh}
+\title{}
+\usepackage[paperwidth=612pt,paperheight=792pt,top=56pt,right=56pt,bottom=56pt,left=56pt]{geometry}
+
+\makeatletter
+	\newenvironment{indentation}[3]%
+	{\par\setlength{\parindent}{#3}
+	\setlength{\leftmargin}{#1}       \setlength{\rightmargin}{#2}%
+	\advance\linewidth -\leftmargin       \advance\linewidth -\rightmargin%
+	\advance\@totalleftmargin\leftmargin  \@setpar{{\@@par}}%
+	\parshape 1\@totalleftmargin \linewidth\ignorespaces}{\par}%
+\makeatother 
+
+% new LaTeX commands
+\newcommand{\styleBullets}[1]{#1}
+\newcommand{\styleHeading}[1]{{\large #1}}
+\newcommand{\styleIndex}[1]{#1}
+\newcommand{\styleTextbody}[1]{#1}
+
+
+\begin{document}
+
+\begin{enumerate}
+	\item This zip folder contains a file named
+\hspace{15pt}Y10UC172\_Y10UC122\_Y10UC125.pdf that tells us about the
+basic definition of our project and all the references that we have
+used. It also contains information about the various algorithms of
+mutex that we have used in our computer cluster.
+	\item File named randa.c contains the c code containing the header file
+mpi.h that works on the ricarts and agarwala's algorithm.
+	\item File named cluster.pdf contains the commands which we have used in all
+the nodes to configure and make the cluster.
+	\item File named algorithm.pdf contains the Ricarts and Agarwala's
+algorithm.
+	\item To compile the MPI code, we have to type the following command:
+\end{enumerate}
+
+
+{\raggedright
+mpiCC \textendash{}o randa.c randa
+}
+
+{\raggedright
+To run the MPI code we have to type the following command:
+}
+
+{\raggedright
+\hspace{15pt}mpirun \textendash{}np 3 randa.c
+}
+
+
+\end{document}
